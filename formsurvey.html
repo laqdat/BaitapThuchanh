@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Khảo Sát Khách Hàng - Starbucks</title>
+</head>
+<body>
+  <h1>Khảo Sát Khách Hàng - Starbucks</h1>
+  <form action="#" method="post">
+    
+    <p><strong>1. Họ và tên:</strong></p>
+    <input type="text" name="fullname" required>
+
+    <p><strong>2. Email:</strong></p>
+    <input type="email" name="email" required>
+
+    <p><strong>3. Bạn ghé thăm Starbucks bao nhiêu lần mỗi tuần?</strong></p>
+    <select name="frequency" required>
+      <option value="">--Chọn--</option>
+      <option value="0">0 lần</option>
+      <option value="1-2">1-2 lần</option>
+      <option value="3-4">3-4 lần</option>
+      <option value="5+">5 lần trở lên</option>
+    </select>
+
+    <p><strong>4. Bạn hài lòng với chất lượng đồ uống?</strong></p>
+    <input type="radio" name="quality" value="rất hài lòng"> Rất hài lòng<br>
+    <input type="radio" name="quality" value="hài lòng"> Hài lòng<br>
+    <input type="radio" name="quality" value="bình thường"> Bình thường<br>
+    <input type="radio" name="quality" value="không hài lòng"> Không hài lòng<br>
+
+    <p><strong>5. Món bạn yêu thích nhất tại Starbucks:</strong></p>
+    <input type="text" name="favorite_drink">
+
+    <p><strong>6. Bạn có góp ý nào để chúng tôi phục vụ tốt hơn không?</strong></p>
+    <textarea name="feedback" rows="4" cols="50" placeholder="Nhập góp ý tại đây..."></textarea>
+
+    <br><br>
+    <input type="submit" value="Gửi khảo sát">
+  </form>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Đào Tạo Starbucks</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f5;
+  padding: 40px;
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #00754a; /* Màu chủ đạo Starbucks */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="checkbox"] {
+  margin-top: 8px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #00754a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005d3a;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Form Đăng Ký Quy Trình Đào Tạo Starbucks</h2>
+    <form action="#" method="post">
+      <label for="name">Họ và tên:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email liên hệ:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="role">Vị trí đăng ký:</label>
+      <select id="role" name="role" required>
+        <option value="">--Chọn vị trí--</option>
+        <option value="barista">Barista</option>
+        <option value="supervisor">Giám sát ca</option>
+        <option value="store_manager">Quản lý cửa hàng</option>
+      </select>
+
+      <label for="training">Chương trình đào tạo:</label>
+      <input type="checkbox" name="training[]" value="Dịch vụ khách hàng"> Dịch vụ khách hàng<br>
+      <input type="checkbox" name="training[]" value="Pha chế đồ uống"> Pha chế đồ uống<br>
+      <input type="checkbox" name="training[]" value="Vệ sinh & an toàn"> Vệ sinh & an toàn<br>
+
+      <label for="note">Ghi chú thêm (nếu có):</label>
+      <textarea id="note" name="note" rows="4"></textarea>
+
+      <button type="submit">Gửi đăng ký</button>
+    </form>
+  </div>
+</body>
+</html>
