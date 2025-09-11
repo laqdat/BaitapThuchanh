@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+    <h2>Kết quả so sánh chuỗi</h2>
+    <pre id="output"></pre>
+
+    <script>
+        let str1 = prompt("Nhập chuỗi thứ nhất:");
+        let str2 = prompt("Nhập chuỗi thứ hai:");
+
+        let output = "Chuỗi 1: " + str1 + "\n";
+        output += "Chuỗi 2: " + str2 + "\n";
+
+        if (str1 === str2) {
+            output += "Hai chuỗi giống nhau";
+        } else {
+            output += "Hai chuỗi không giống nhau";
+        }
+
+        document.getElementById("output").textContent = output;
+    </script>
+</body>
+</html>

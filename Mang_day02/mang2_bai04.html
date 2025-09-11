@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+    <h2>Kết quả đếm số từ trong chuỗi</h2>
+    <pre id="output"></pre>
+
+    <script>
+        let str = "Bruh";
+        let words = str.trim().split(/\s+/);
+        let count = words.length;
+
+        let output = "Chuỗi: " + str + "\n";
+        output += "Số từ trong chuỗi: " + count;
+
+        document.getElementById("output").textContent = output;
+    </script>
+</body>
+</html>

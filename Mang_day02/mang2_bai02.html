@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+    <h2>Kết quả đảo ngược mảng</h2>
+    <pre id="output"></pre>
+
+    <script>
+        let arr = ['c', 's', 'c', '2', '6', '1'];
+        let reversed = arr.reverse().join("");
+
+        let output = "Mảng ban đầu: " + arr.join(", ") + "\n";
+        output += "Sau khi đảo ngược: " + reversed;
+
+        document.getElementById("output").textContent = output;
+    </script>
+</body>
+</html>

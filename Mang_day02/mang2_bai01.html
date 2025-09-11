@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+    <h2>Kết quả in mảng 2 chiều</h2>
+    <pre id="output"></pre>
+
+    <script>
+        let a = [
+            [1, 2, 1, 24],
+            [8, 11, 9, 4],
+            [7, 0, 7, 27],
+            [7, 4, 28, 14],
+            [3, 10, 26, 7]
+        ];
+
+        let output = "";
+        for (let i = 0; i < a.length; i++) {
+            output += "row " + i + "\n";
+            for (let j = 0; j < a[i].length; j++) {
+                output += " " + a[i][j] + "\n";
+            }
+        }
+
+        document.getElementById("output").textContent = output;
+    </script>
+</body>
+</html>

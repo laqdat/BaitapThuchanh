@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+    <h2>Kết quả đếm ký tự số</h2>
+    <pre id="output"></pre>
+
+    <script>
+        let arr = ['a', '1', 'b', '3', 'c', '9', 'x', '0', '5', 'z'];
+        let count = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] >= '0' && arr[i] <= '9') {
+                count++;
+            }
+        }
+
+        let output = "Mảng: " + arr.join(", ") + "\n";
+        output += "Số ký tự số (0-9) trong mảng: " + count;
+
+        document.getElementById("output").textContent = output;
+    </script>
+</body>
+</html>

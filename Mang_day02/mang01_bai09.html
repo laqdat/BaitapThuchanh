@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9 - Nối mảng</title>
+</head>
+<body>
+    <h2>Kết quả nối mảng</h2>
+    <pre id="output"></pre>
+
+    <script>
+        let a = [1,2,3,4,5,6,7,8,9,10];
+        let b = [11,12,13,14,15,16,17,18,19,20];
+
+        let c = b.concat(a);
+
+        let output = "";
+        output += "Mảng a: " + a.join(", ") + "\n";
+        output += "Mảng b: " + b.join(", ") + "\n";
+        output += "Mảng c (nối b và a): " + c.join(", ");
+
+        document.getElementById("output").textContent = output;
+    </script>
+</body>
+</html>
