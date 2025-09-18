@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Kiểm tra ký tự trong mảng</title>
+</head>
+<body>
+  <h2>Kiểm tra ký tự trong mảng</h2>
+  <input id="charArrInput" type="text" placeholder="Nhập mảng ký tự, cách nhau bằng dấu phẩy" />
+  <input id="charCheck" type="text" maxlength="1" placeholder="Nhập 1 ký tự" />
+  <button onclick="checkCharHandler()">Kiểm tra</button>
+  <p id="result"></p>
+
+  <script>
+    // Hàm kiểm tra ký tự trong mảng ký tự
+    function checkCharInArray(arr, ch) {
+      let count = 0;
+      for (let c of arr) {
+        if (c === ch) count++;
+      }
+      return count > 0 ? count : -1;
+    }
+
+    function checkCharHandler() {
+      const rawArr = document.getElementById("charArrInput").value;
+      const ch = document.getElementById("charCheck").value;
+      if (!rawArr || !ch) {
+        document.getElementById("result").innerText = "Vui lòng nhập mảng ký tự và ký tự cần kiểm tra.";
+        return;
+      }
+      const arr = rawArr.split(",").map(x => x.trim());
+      const res = checkCharInArray(arr, ch);
+      document.getElementById("result").innerText =
+        res === -1 ? `"${ch}" không có trong mảng.` : `"${ch}" xuất hiện ${res} lần trong mảng.`;
+    }
+  </script>
+</body>
+</html>

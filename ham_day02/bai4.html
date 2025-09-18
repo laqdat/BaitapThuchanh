@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Kiểm tra ký tự số</title>
+</head>
+<body>
+  <h2>Kiểm tra ký tự số</h2>
+  <input id="char" type="text" maxlength="1" placeholder="Nhập 1 ký tự" />
+  <button onclick="checkChar()">Kiểm tra</button>
+  <p id="result"></p>
+
+  <script>
+    // Hàm kiểm tra ký tự số
+    function isDigit(ch) {
+      return ch >= '0' && ch <= '9';
+    }
+
+    // Hàm gọi khi nhấn nút
+    function checkChar() {
+      const c = document.getElementById("char").value;
+      if (c === "") {
+        document.getElementById("result").innerText = "Vui lòng nhập một ký tự.";
+        return;
+      }
+      const res = isDigit(c);
+      document.getElementById("result").innerText = 
+        res ? `"${c}" là ký tự số.` : `"${c}" không phải ký tự số.`;
+    }
+  </script>
+</body>
+</html>

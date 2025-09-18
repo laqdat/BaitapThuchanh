@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tìm số nhỏ nhất</title>
+</head>
+<body>
+  <h2>Tìm số nguyên nhỏ nhất</h2>
+  <input id="a" type="number" placeholder="Số thứ 1" />
+  <input id="b" type="number" placeholder="Số thứ 2" />
+  <input id="c" type="number" placeholder="Số thứ 3" />
+  <button onclick="findMin()">Tìm</button>
+  <p id="result"></p>
+
+  <script>
+    // Hàm tìm số nhỏ nhất trong 3 số nguyên
+    function minOfThree(x, y, z) {
+      return Math.min(x, y, z);
+    }
+
+    function findMin() {
+      const a = parseInt(document.getElementById("a").value);
+      const b = parseInt(document.getElementById("b").value);
+      const c = parseInt(document.getElementById("c").value);
+
+      if (isNaN(a) || isNaN(b) || isNaN(c)) {
+        document.getElementById("result").innerText = "Vui lòng nhập đủ 3 số.";
+        return;
+      }
+
+      const minVal = minOfThree(a, b, c);
+      document.getElementById("result").innerText = 
+        "Số nhỏ nhất là: " + minVal;
+    }
+  </script>
+</body>
+</html>

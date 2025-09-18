@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tính giai thừa</title>
+</head>
+<body>
+  <h2>Tính giai thừa</h2>
+  <input id="num" type="number" min="0" placeholder="Nhập số nguyên" />
+  <button onclick="calc()">Tính</button>
+  <p id="result"></p>
+
+  <script>
+    function factorial(n) {
+      if (n < 0) return "Không có giai thừa cho số âm";
+      let res = 1;
+      for (let i = 1; i <= n; i++) {
+        res *= i;
+      }
+      return res;
+    }
+
+    function calc() {
+      const n = parseInt(document.getElementById("num").value);
+      const kq = factorial(n);
+      document.getElementById("result").innerText = n + "! = " + kq;
+    }
+  </script>
+</body>
+</html>

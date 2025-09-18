@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đổi chỗ hai số nguyên</title>
+</head>
+<body>
+  <h2>Đổi chỗ hai số nguyên</h2>
+  <input id="a" type="number" placeholder="Số thứ 1" />
+  <input id="b" type="number" placeholder="Số thứ 2" />
+  <button onclick="swapNumbers()">Đổi chỗ</button>
+  <p id="result"></p>
+
+  <script>
+    // Hàm đổi chỗ hai số
+    function swap(x, y) {
+      let temp = x;
+      x = y;
+      y = temp;
+      return [x, y];
+    }
+
+    function swapNumbers() {
+      let a = parseInt(document.getElementById("a").value);
+      let b = parseInt(document.getElementById("b").value);
+
+      if (isNaN(a) || isNaN(b)) {
+        document.getElementById("result").innerText = "Vui lòng nhập đủ 2 số.";
+        return;
+      }
+
+      const [newA, newB] = swap(a, b);
+      document.getElementById("result").innerText =
+        "Sau khi đổi chỗ: a = " + newA + ", b = " + newB;
+    }
+  </script>
+</body>
+</html>

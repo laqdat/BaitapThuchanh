@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đảo ngược mảng</title>
+</head>
+<body>
+  <h2>Đảo ngược mảng</h2>
+  <input id="arrInput" type="text" placeholder="Nhập mảng số, cách nhau bằng dấu phẩy" />
+  <button onclick="reverseArrayHandler()">Đảo ngược</button>
+  <p id="result"></p>
+
+  <script>
+    // Hàm đảo ngược mảng số nguyên
+    function reverseArray(arr) {
+      return arr.reverse();
+    }
+
+    function reverseArrayHandler() {
+      const raw = document.getElementById("arrInput").value;
+      if (!raw) {
+        document.getElementById("result").innerText = "Vui lòng nhập mảng số.";
+        return;
+      }
+      const arr = raw.split(",").map(x => parseInt(x.trim())).filter(x => !isNaN(x));
+      const reversed = reverseArray(arr);
+      document.getElementById("result").innerText = "Mảng sau khi đảo: [" + reversed.join(", ") + "]";
+    }
+  </script>
+</body>
+</html>
